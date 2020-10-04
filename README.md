@@ -10,7 +10,7 @@ Exploring different Sudoku puzzle solving algorithms, using Go.
 > A brute force algorithm visits the empty cells in some order, filling in digits sequentially, or backtracking when the number is found to be not valid.
 > <br>[Wikipedia](https://en.wikipedia.org/wiki/Sudoku_solving_algorithms#Backtracking)
 
-The backtracking is one of the first solutions you'd think of, but it's highly inefficient. 
+Backtracking is one of the first solutions you'd think of, but it's highly inefficient. 
 As long as the puzzle is valid, a solution will be found. Even complex puzzles are solved within seconds using modern day technology.
  The algorithm is fairly simple as you just look up collisions for a single cell at a time, iterating over the possibilities
  until progressing.
