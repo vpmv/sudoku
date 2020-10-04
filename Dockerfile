@@ -12,5 +12,5 @@ WORKDIR /app/src
 RUN go mod download
 
 # build different solvers for linux & mac
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build  -o /app/bin/bruteforce
-RUN CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o /app/bin/mac/bruteforce
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build  -o /app/bin/bruteforce -i bruteforce.go
+RUN CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o /app/bin/mac/bruteforce -i bruteforce.go
