@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"vpmv/sudoku/stopwatch"
 	"vpmv/sudoku/sudoku"
 )
 
@@ -53,8 +54,12 @@ func main() {
 	// default:
 	// }
 
+	stopwatch.Start()
 	if solveDefault() {
+		stopwatch.Stop()
 		puzzle.Print()
+
+		stopwatch.Print()
 	} else {
 		fmt.Println(`No solution found!`)
 	}
